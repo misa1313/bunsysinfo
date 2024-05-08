@@ -8,8 +8,7 @@ pipeline {
                     sh 'export BUN_INSTALL="$HOME/.bun"' 
                     sh 'export PATH=$BUN_INSTALL/bin:$PATH'
                     sh 'export BUNPATH=$HOME/.bun/bin'
-                    sh 'echo $BUNPATH'
-                    sh "bun install"
+                    sh '$BUNPATH/bun install'
                 }
             }
         }
