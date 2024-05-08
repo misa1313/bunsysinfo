@@ -1,14 +1,16 @@
 pipeline {
     agent any
+    environment{
+        BUNPATH="${HOME}/.bun/bin"
+        BUN_INSTALL="${HOME}/.bun" 
+    }
     stages {
         stage('SettingBun') {
             steps{
                 script {
                     sh 'curl -fsSL https://bun.sh/install | bash -s "bun-v1.0.0"'
-                    sh 'export BUN_INSTALL="$HOME/.bun"' 
                     sh 'export PATH=$BUN_INSTALL/bin:$PATH'
-                    sh 'export BUNPATH=$HOME/.bun/bin'
-                    sh "$BUNPATH/bun install"
+                    sh 'bun install'
                 }
             }
         }
