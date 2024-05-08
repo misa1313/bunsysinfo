@@ -1,7 +1,7 @@
 import figlet from "figlet"
 import "systeminformation"
 import { getMem, getCPU } from "./info.js";
-//import Bun from "bun";
+import Bun from "bun";
 
 
 const server = Bun.serve({
