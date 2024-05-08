@@ -18,8 +18,8 @@ pipeline {
         stage('LintTest'){
             steps{
                 script {
-                  sh "bunx eslint ."
-                  sh "bun test"
+                  sh '${BUNPATH}/bunx eslint .'
+                  sh '${BUNPATH}/bun test'
                 }
             }
         }
