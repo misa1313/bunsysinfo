@@ -13,7 +13,8 @@ test("checkMem", async () => {
 
 test("checkFreeMem", async () => {
   const data = await getMem();
-  //replace this with expect(data.total).toBeGreaterThan(data.free);
+  //replace this with 
   //for the test to succeed
-  expect(data.total).toEqual(data.free);
+  //expect(data.total).toEqual(data.free);
+  expect(data.total).toBeGreaterThan(data.free);
 }, 50);
