@@ -10,7 +10,7 @@ pipeline {
                 script {
                     sh 'curl -fsSL https://bun.sh/install | bash -s "bun-v1.0.0"'
                     sh 'export PATH=$BUN_INSTALL/bin:$PATH'
-                    sh 'bun install'
+                    sh '${BUNPATH}/bun install'
                 }
             }
         }
