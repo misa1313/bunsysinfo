@@ -6,6 +6,7 @@ pipeline {
                 script {
                     sh 'curl -fsSL https://bun.sh/install | bash -s "bun-v1.0.0"'
                     sh 'export BUN_INSTALL="$HOME/.bun"' 
+                    sh 'echo $HOME'
                     sh 'export PATH=$BUN_INSTALL/bin:$PATH'
                     sh 'export BUNPATH="$HOME/.bin/bin"'
                     sh "bun install"
